@@ -113,3 +113,6 @@ python manage.py test -v 2
 
 CI: `.github/workflows/tests.yml` runs the suite on every push.
 Test output: see `TEST_OUTPUT.md`.
+## Status
+
+All automated tests currently pass.
