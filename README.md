@@ -45,23 +45,7 @@ For each candidate box:
 - Box *internal* dimensions are assumed to be the usable space.
 - The ad-hoc POST endpoint is CSRF-exempt and unauthenticated. Add auth before
   real use.
-## Project Structure
 
-box-selection-system/
-├── boxes/
-│   ├── models.py
-│   ├── services.py
-│   ├── views.py
-│   ├── urls.py
-│   └── tests/
-├── config/
-├── .github/
-│   └── workflows/
-├── manage.py
-├── requirements.txt
-├── README.md
-├── AI_USAGE.md
-└── TEST_OUTPUT.md
 ## Setup
 
 ```bash
