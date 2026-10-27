@@ -18,6 +18,20 @@ is easy to test). For each box it checks:
 Of the boxes that pass, the **cheapest** wins. Ties go to the smaller volume,
 then lower max weight, then name, so the answer is deterministic.
 
+## Selection Approach
+
+For each candidate box:
+
+1. Calculate the total order weight.
+2. Reject the box if the weight exceeds its capacity.
+3. Calculate total item volume.
+4. Reject the box if the total volume exceeds the box volume.
+5. Run the packing algorithm to verify that the individual products can physically fit.
+6. Keep all boxes that successfully pass these checks.
+7. Select the cheapest valid box.
+8. Apply deterministic tie-breaking when multiple boxes have the same cost.
+
+
 ### Design decisions / limitations
 
 - The packer is a heuristic. If it says "fits", the items really fit (no
@@ -31,7 +45,23 @@ then lower max weight, then name, so the answer is deterministic.
 - Box *internal* dimensions are assumed to be the usable space.
 - The ad-hoc POST endpoint is CSRF-exempt and unauthenticated. Add auth before
   real use.
+## Project Structure
 
+box-selection-system/
+├── boxes/
+│   ├── models.py
+│   ├── services.py
+│   ├── views.py
+│   ├── urls.py
+│   └── tests/
+├── config/
+├── .github/
+│   └── workflows/
+├── manage.py
+├── requirements.txt
+├── README.md
+├── AI_USAGE.md
+└── TEST_OUTPUT.md
 ## Setup
 
 ```bash
