@@ -97,6 +97,36 @@ python manage.py test -v 2
 
 CI: `.github/workflows/tests.yml` runs the suite on every push.
 Test output: see `TEST_OUTPUT.md`.
+
+## Test Cases
+
+The project includes 25 automated test cases covering:
+
+### Box Selection Logic
+- Selects the cheapest fitting box
+- Handles weight limits
+- Handles dimension limits
+- Allows product rotation
+- Handles exact-fit products
+- Handles multiple products
+- Handles product quantities
+- Handles tie-breaking between boxes
+- Rejects products with invalid dimensions
+- Rejects invalid quantities
+- Handles products that are too heavy
+- Handles products that cannot fit in any box
+- Handles empty orders and empty box lists
+- Produces deterministic results
+
+### API
+- Successfully recommends a box
+- Handles heavy orders
+- Handles orders where no box fits
+- Handles unknown orders
+- Handles unknown products
+- Handles empty orders
+- Handles invalid JSON
+- Rejects unsupported HTTP methods
 ## Status
 
 All automated tests currently pass.
