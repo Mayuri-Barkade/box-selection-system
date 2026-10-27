@@ -1,9 +1,5 @@
 # Test Output
 
-Paste the real terminal output of `python manage.py test -v 2` below
-(or link your GitHub Actions run instead).
-
-```
 (venv) PS C:\Users\Admin\Desktop\Mayuri_Barkade_Test-Solution\box-selection-system> python manage.py test -v 2
 Found 25 test(s).
 Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...

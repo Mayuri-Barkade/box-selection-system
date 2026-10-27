@@ -1,4 +1,4 @@
-# AI-Assisted Box Selection System (Django)
+# Box Selection System (Django)
 
 Recommends the most suitable shipping box for an order, based on product
 dimensions/weight and each box's internal dimensions, max weight and cost.
